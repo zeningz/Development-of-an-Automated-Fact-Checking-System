@@ -1,0 +1,15 @@
+def dpr_setting(args):
+    # default setting
+    args.batch_size = getattr(args, 'batch_size', 8)
+    args.epoch = getattr(args, 'epoch', 100)
+    args.report_freq = getattr(args, "report_freq", 5)
+    args.accumulate_step = getattr(args, "accumulate_step", 5)
+    args.model_type = getattr(args, "model_type", "roberta-large")
+    args.warmup_steps = getattr(args, "warmup_steps", 200)
+    args.grad_norm = getattr(args, "grad_norm", 1)
+    args.seed = getattr(args, "seed", 0)
+    args.max_lr = getattr(args, "max_lr", 2e-5)
+    args.max_length = getattr(args, "max_length", 128)
+    args.eval_interval = getattr(args, "eval_interval", 30)
+    args.evidence_num = getattr(args, "evidence_num", 3)
+    args.evidence_samples = getattr(args, "evidence_samples", 128)
